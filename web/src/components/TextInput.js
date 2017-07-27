@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 export default class TextInput extends Component {
+	_onKeyPress = (e) => {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			this.props.onEnter && this.props.onEnter(e.target.value);
+		}
+	}
+
 	render() {
 		const {
 			id,
@@ -15,7 +22,8 @@ export default class TextInput extends Component {
 				id={id}
 				className={className}
 				placeholder={placeholder}
-				name={name} />
+				name={name}
+				onKeyPress={this._onKeyPress} />
 		);
 	}
 }

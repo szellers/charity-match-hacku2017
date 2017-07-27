@@ -1,6 +1,7 @@
-mport React, { Component } from 'react';
+import React, { Component } from 'react';
 
-import SignIn from './SignIn';
+import MainPageNavBar from './MainPageNavBar';
+import MainPageSearchResults from './MainPageSearchResults';
 
 export default class MainPage extends Component {
 	render() {

@@ -2,6 +2,7 @@ import '../stylesheets/main.scss';
 
 import React, { Component } from 'react';
 
+import MainPage from './MainPage';
 import SignInPage from './SignInPage';
 
 export default class App extends Component {
@@ -9,7 +10,7 @@ export default class App extends Component {
 		return (
 			<div id="app">
 				<div id="outer-container">
-					<SignInPage />
+					<MainPage />
 				</div>
 			</div>
 		);
