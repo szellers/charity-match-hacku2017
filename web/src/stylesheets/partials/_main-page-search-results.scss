@@ -1,3 +1,7 @@
+body {
+	background: $catskill-white;
+}
+
 #search-bar-container {
 	float: left;
 	
@@ -8,10 +12,16 @@
 
 	#search {
 		margin: 60px 0 20px;
+
+		height: 50px;
+	}
+
+	#filter {
+		height: 50px;
 	}
 
 	#search-button {
-		margin: 20px 0;
+		margin: 10px 0;
 	}
 }
 
@@ -29,6 +39,7 @@
 		height: 33.33%;
 		padding: 20px;
 
+		background: $white;
 		@include border-radius(4px);
 		cursor: pointer;
 		@include light-shadow;
