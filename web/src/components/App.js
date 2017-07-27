@@ -10,7 +10,7 @@ export default class App extends Component {
 		return (
 			<div id="app">
 				<div id="outer-container">
-					<MainPage />
+					{this.props.children}
 				</div>
 			</div>
 		);
