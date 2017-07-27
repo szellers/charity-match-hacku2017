@@ -1,0 +1,182 @@
+#search-bar-container {
+	float: left;
+	
+	width: 25%;
+	height: 100%;
+
+	text-align: center;
+
+	#search {
+		margin: 60px 0 20px;
+	}
+
+	#search-button {
+		margin: 20px 0;
+	}
+}
+
+#search-results-container {
+	float: left; 
+	width: 75%;
+	height: 100%;
+	padding: 10px;
+
+	.search-result-card {
+		float: left;
+		margin: 1%;
+
+		width: 31%;
+		height: 33.33%;
+		padding: 20px;
+
+		@include border-radius(4px);
+		cursor: pointer;
+		@include light-shadow;
+	}
+
+		.search-result-card__title {
+			font-size: 25px;
+		}
+
+		.search-result-card__desc {
+			margin: 10px 0;
+
+			color: #AEAEAE;
+			font-size: 15px;
+			line-height: 17px;
+		}
+
+		.search-result-card__charity {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+
+			color: $teal;
+			font-family: $quicksand;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.search-result-card__date {
+			color: $teal;
+			font-family: $open-sans;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.search-result-card__going-container {
+			margin-top: 8px;
+
+			width: 100%;
+			height: 30px;
+			text-align: right;
+			
+			.search-result-card__going-img-container {
+				position: absolute;
+				right: 15px;
+			}
+
+			.search-result-card__going-img {
+				display: inline-block;
+				position: relative;
+				top: 0;
+				right: 0;
+
+				width: 30px;
+				height: 30px;
+
+				background: $alto;
+				border: 2px solid $white;
+				@include border-radius(50%);
+			}
+
+			@for $i from 1 through 5 {
+				.search-result-card__going-img-#{$i} {
+					top: 0;
+					right: 10px * $i;
+				}
+			}
+
+			.search-result-card__going-more {
+				float: right;
+				position: relative;
+				top: 50%;
+				right: 0;
+				@include transform(translateY(-50%));
+
+				color: #AEAEAE;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+		}
+
+	.search-result-card-details-outer-container {
+		width: 100%;
+		height: 100%;
+		padding: 40px;
+
+		.search-result-card-details {
+			width: 100%;
+			height: 90%;
+		}
+
+		.search-result-card-details__sign-up-btn {
+			float: right;
+			position: relative;
+			top: 10px;
+			right: 0;
+		}
+
+		.search-result-card-details-container {
+			@include center;
+		}
+
+		.search-result-card__charity {
+			top: 10px;
+			right: 10px;
+
+			font-size: 20px;
+		}
+
+		.search-result-card__desc {
+			margin: 20px 0;
+			line-height: 25px;
+		}
+
+		.search-result-card__title {
+			font-size: 40px;
+		}
+
+		.search-result-card__date {
+			font-size: 17px;
+		}
+
+		.search-result-card__going-img-container {
+			right: -10px;
+		}
+
+		.search-result-card__going-container {
+			height: 50px;
+		}
+
+		.search-result-card__going-more {
+			font-size: 15px;
+		}
+
+		.search-result-card__going-img {
+			width: 50px;
+			height: 50px;
+		}
+
+		@for $i from 1 through 5 {
+			.search-result-card__going-img-#{$i} {
+				top: 0;
+				right: 20px * $i;
+			}
+		}
+
+
+	}
+}

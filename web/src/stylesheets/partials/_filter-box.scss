@@ -1,0 +1,22 @@
+#filters {
+	margin: 20px 0;
+
+	.filter-box {
+		display: inline-block;
+		margin: 3px;
+
+		padding: 4px 8px;
+
+		border: 1px solid $teal;
+		@include border-radius(4px);
+		color: $teal;
+		cursor: pointer;
+		text-align: justify;
+		@include transition(all 0.2s ease);
+
+		&:hover {
+			background: $teal;
+			color: $white;
+		}
+	}
+}
