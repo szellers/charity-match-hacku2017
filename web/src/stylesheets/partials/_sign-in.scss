@@ -1,0 +1,56 @@
+#sign-in-container {
+	background: $catskill-white;
+
+	width: 100%;
+	height: 100%;
+
+	#sign-in {
+		@include center;
+
+		width: 50%;
+		height: 50%;
+
+		background: $white;
+		border: 1px solid $alto;
+		@include border-radius(4px);
+		box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+		text-align: center;
+
+		#sign-in__title {
+			position: absolute;
+			top: 20px;
+
+			width: 100%;
+
+			text-align: center;
+		}
+
+		form {
+			@include center;
+
+			width: 100%;
+			height: 100%;
+
+			text-align: center;
+
+			#sign-in__id {
+				display: block;
+				@include center;
+
+				width: 80%;
+				height: 40px;
+
+				border-bottom: 1px solid $alto;
+				font-family: $quicksand;
+				font-size: 25px;
+				text-align: center;
+			}
+
+			#sign-in__sign-in-btn {
+				display: block;
+				@include center;
+				margin-top: 20px;
+			}
+		}
+	}
+}

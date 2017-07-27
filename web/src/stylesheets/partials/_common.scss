@@ -1,0 +1,25 @@
+.common-btn {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+
+    background: $teal;
+    @include border-radius(4px);
+    color: $white;
+    cursor: pointer;
+    font-family: $open-sans;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    @include light-shadow;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include transition(all 0.2s ease);
+}
+
+.common-title {
+    color: $orange;
+    font-family: $quicksand;
+    font-size: 40px;
+    font-weight: 600;
+}

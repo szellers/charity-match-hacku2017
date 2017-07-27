@@ -1,0 +1,24 @@
+$light-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+$light-shadow-hover: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+$light-shadow-active: 0 3px 4px rgba(50, 50, 93, 0.11), 0 1px 2px rgba(0, 0, 0, 0.08);
+
+@mixin shadow($shadow, $hover-shadow, $active-shadow, $deltaY, $hover) {
+    box-shadow: $shadow;
+    @include transition(all 0.2s ease);
+
+    @if $hover {
+        &:hover {
+            box-shadow: $hover-shadow;
+            @include transform(translateY(-$deltaY));
+        }
+
+        &:active {
+            box-shadow: $active-shadow;
+            @include transform(translateY($deltaY));
+        }
+    }
+}
+
+@mixin light-shadow($hover: true) {
+    @include shadow($light-shadow, $light-shadow-hover, $light-shadow-active, 1px, $hover);
+}
