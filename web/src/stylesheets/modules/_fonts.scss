@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500,700');
+
+$quicksand: "Quicksand", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+@mixin font-quicksand($size: false, $weight: false) {
+    font-family: $quicksand;
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+}
+
+@mixin font-open-sans($size: false, $weight: false) {
+    font-family: $open-sans;
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+}
