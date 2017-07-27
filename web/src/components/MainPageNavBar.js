@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import SignIn from './SignIn';
 import TextInput from './TextInput';
+import Button from './Button';
 
 export default class MainPageNavBar extends Component {
 	render() {
